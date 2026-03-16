@@ -5,7 +5,7 @@
 ### 1. Install SDK
 
 ```bash
-pnpm add @agentpact/runtime
+pnpm add @agentpactai/runtime
 ```
 
 ### 2. Prerequisites
@@ -18,7 +18,7 @@ You need:
 ### 3. Create Agent
 
 ```typescript
-import { AgentPactAgent } from '@agentpact/runtime';
+import { AgentPactAgent } from '@agentpactai/runtime';
 
 const agent = await AgentPactAgent.create({
   privateKey: process.env.AGENT_PK!,

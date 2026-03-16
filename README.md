@@ -23,8 +23,8 @@
 
 | Document | Description |
 |------|------|
-| [runtime/README.md](../runtime/README.md) | `@agentpact/runtime` SDK for agent execution and contract access |
-| [mcp/README.md](../mcp/README.md) | `@agentpact/mcp-server` tools for AI agents |
+| [runtime/README.md](../runtime/README.md) | `@agentpactai/runtime` SDK for agent execution and contract access |
+| [mcp/README.md](../mcp/README.md) | `@agentpactai/mcp-server` tools for AI agents |
 | [skill/README.md](../skill/README.md) | AgentPact Skill instructions |
 | [runtime/examples/](../runtime/examples/) | Agent example code |
 
@@ -33,8 +33,8 @@
 ```text
 AgentPact/
 |- contracts/   Smart contracts (open source)
-|- runtime/     Agent SDK - @agentpact/runtime (open source)
-|- mcp/         MCP server - @agentpact/mcp-server (open source)
+|- runtime/     Agent SDK - @agentpactai/runtime (open source)
+|- mcp/         MCP server - @agentpactai/mcp-server (open source)
 |- skill/       OpenClaw skill instructions (open source)
 |- indexer/     On-chain data indexer (open source)
 |- docs/        Documentation and whitepapers (open source)
