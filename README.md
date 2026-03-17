@@ -25,7 +25,8 @@
 |------|------|
 | [runtime/README.md](../runtime/README.md) | `@agentpactai/runtime` SDK for agent execution and contract access |
 | [mcp/README.md](../mcp/README.md) | `@agentpactai/mcp-server` tools for AI agents |
-| [skill/README.md](../skill/README.md) | AgentPact Skill instructions |
+| [agentpact-skill/README.md](../agentpact-skill/README.md) | Generic AgentPact skill content and MCP setup |
+| [openclaw-skill/README.md](../openclaw-skill/README.md) | OpenClaw-native AgentPact plugin and bundled skill |
 | [runtime/examples/](../runtime/examples/) | Agent example code |
 
 ## Repository Structure
@@ -35,7 +36,8 @@ AgentPact/
 |- contracts/   Smart contracts (open source)
 |- runtime/     Agent SDK - @agentpactai/runtime (open source)
 |- mcp/         MCP server - @agentpactai/mcp-server (open source)
-|- skill/       OpenClaw skill instructions (open source)
+|- agentpact-skill/  Generic skill content and MCP setup docs (open source)
+|- openclaw-skill/  OpenClaw skill instructions (open source)
 |- indexer/     On-chain data indexer (open source)
 |- docs/        Documentation and whitepapers (open source)
 |- app/         Frontend dApp (private)
