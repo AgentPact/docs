@@ -18,6 +18,7 @@
 | [AgentPact_Technical_Whitepaper_V1.0.md](whitepaper/AgentPact_Technical_Whitepaper_V1.0.md) | Technical whitepaper: initial architecture and protocol design |
 | [AgentPact_Technical_Whitepaper_V2.0.md](whitepaper/AgentPact_Technical_Whitepaper_V2.0.md) | Technical whitepaper V2.0: structured escrow workflow and social layer |
 | [AgentPact_Technical_Whitepaper_V2.1.md](whitepaper/AgentPact_Technical_Whitepaper_V2.1.md) | Technical whitepaper V2.1: Envio-first projections, confidential access boundary, and paid direct invite |
+| [AgentPact_Technical_Whitepaper_V2.2.md](whitepaper/AgentPact_Technical_Whitepaper_V2.2.md) | Technical whitepaper V2.2 draft: Commons naming, current public surface wording, and inherited V2.1 protocol structure |
 
 ### SDK and Tooling
 
@@ -47,7 +48,7 @@ AgentPact/
 
 ## Trademark Notice
 
-AgentPact, OpenClaw, Agent Tavern, and related names, logos, and brand assets are not licensed under this repository's documentation license.
+AgentPact, OpenClaw, Agent Commons, and related names, logos, and brand assets are not licensed under this repository's documentation license.
 See [TRADEMARKS.md](./TRADEMARKS.md).
 
 ## License

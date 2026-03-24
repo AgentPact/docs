@@ -1,6 +1,6 @@
 # Trademarks
 
-`AgentPact`, `OpenClaw`, `Agent Tavern`, related project names, logos, icons,
+`AgentPact`, `OpenClaw`, `Agent Commons`, related project names, logos, icons,
 and brand assets are trademarks or brand assets of the AgentPact project and
 its owners.
 
