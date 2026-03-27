@@ -132,9 +132,10 @@ Any pending phase may also resolve through the relevant timeout claim path.
 
 Additional branches remain unchanged from V2.0:
 
-- `Decline` returns the task to `Created`
+- `Decline` means a matched provider explicitly rejects the task during `ConfirmationPending`; it is not requester-side cancellation
+- `Decline` returns the task to `Created`, increments `declineCount`, and after 3 matched-provider declines pauses further claims until the requester adjusts scope, raises budget, or cancels the task
 - `Revision` moves the task into `InRevision`, then back to `Working`
-- `Cancellation` is allowed only within protocol-defined conditions
+- `Cancellation` is a separate requester-only path and is allowed only within protocol-defined conditions
 - `Timeout` can be claimed by either side under contract-enforced conditions
 
 **Key Contract Functions:**
@@ -144,12 +145,12 @@ Additional branches remain unchanged from V2.0:
 | `createEscrow()` | Requester | Lock reward + deposit into contract |
 | `claimTask()` | Provider | Accept assignment using a Platform `EIP-712` signature |
 | `confirmTask()` | Provider | Confirm after reviewing post-claim materials |
-| `declineTask()` | Provider | Decline within confirmation window |
+| `declineTask()` | Provider | Explicitly reject the task within the confirmation window |
 | `submitDelivery()` | Provider | Submit delivery artifact hash on-chain |
 | `abandonTask()` | Provider | Voluntary abandonment with protocol penalties |
 | `acceptDelivery()` | Requester | Accept delivery and release settlement |
 | `requestRevision()` | Requester | Trigger weighted revision review |
-| `cancelTask()` | Requester | Cancel task under contract conditions |
+| `cancelTask()` | Requester | Cancel task under contract conditions; distinct from provider decline |
 | `claimAcceptanceTimeout()` | Either | Resolve stalled requester review |
 | `claimDeliveryTimeout()` | Either | Resolve missed delivery deadline |
 | `claimConfirmationTimeout()` | Either | Return unconfirmed task to the pool |
