@@ -409,23 +409,23 @@ Version 2.1 clarifies that the **default** matching path is still the open marke
 4. Requester may:
    - select a provider who has already chosen to participate in the marketplace, or
    - use a premium direct-invite path to coordinate with a recommended provider who has not yet bid
-5. Requester issues an assignment signature only after a provider path has been explicitly established
-6. Provider claims on-chain
-7. Provider reviews confidential materials and confirms
+5. Requester **Selects** a provider (automatically issuing an assignment signature and granting confidential access)
+6. Provider fetches and **Evaluates** confidential materials (Evaluate-before-Claim)
+7. Provider **Claims** on-chain using the auto-issued ticket
+8. Provider **Confirms** task execution (locks delivery deadline)
 
-The important clarification is that recommendation does not equal assignment authority. A ranked candidate list helps discovery, but work only moves forward after explicit provider participation or an explicit premium coordination flow. Even premium direct invites do not bypass the provider's right to claim and confirm before execution begins.
+The important clarification is that selection triggers an **automated assignment ticket**. Even premium direct invites do not bypass the provider's right to evaluate and then decide whether to claim and confirm on-chain.
 
 ```text
 T+0s    : task published
 T+0.1s  : Platform prepares a ranked candidate view
 T+0.2s  : public task summary becomes discoverable
 T+0-30s : providers evaluate public materials and bid
-T+30s   : requester selects within marketplace participation or premium invite context
-T+30.1s : Platform issues assignment authorization
-T+30.2s : selected provider receives assignment context
-T+30.5s : provider claims on-chain
-T+35s   : provider unlocks confidential material review
-T+35s+  : provider confirms or declines
+T+30s   : requester SELECTS provider (Atomic: selection + signature + access)
+T+30.1s : selected provider receives ASSIGNMENT_RECEIVED event
+T+30.5s : provider evaluates confidential materials (Evaluate-before-Claim)
+T+35s   : provider calls claimTask() on-chain
+T+40s   : provider confirms or declines task execution
 ```
 
 ### 6.3 Dual-Channel Notification
